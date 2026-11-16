@@ -24,16 +24,21 @@ towards its answer. You can also give the *same* signal to both models and compa
 ## Quick start
 
 ```bash
-git clone <this repository>
+git clone https://github.com/SriAshritha/xbci_app.git
 cd xbci_app
 python -m venv .venv
-# Windows:  .venv\Scripts\activate        macOS/Linux:  source .venv/bin/activate
+# Windows:
+.venv\Scripts\activate
+# macOS/Linux:
+source .venv/bin/activate
 pip install torch --index-url https://download.pytorch.org/whl/cpu
 pip install -r requirements.txt
 
 # tell the app where the artifact folder is
-# Windows:  set XBCI_ARTIFACT_ROOT=C:\path\to\XBCI_BNCI2014_001
-# macOS/Linux:  export XBCI_ARTIFACT_ROOT=/path/to/XBCI_BNCI2014_001
+# Windows:
+set XBCI_ARTIFACT_ROOT=C:\path\to\XBCI_BNCI2014_001
+# macOS/Linux:
+export XBCI_ARTIFACT_ROOT=/path/to/XBCI_BNCI2014_001
 streamlit run app.py
 ```
 
@@ -111,9 +116,3 @@ tests/                  audit tests and UI smoke tests
 tools/                  demo-data generator and video renderer
 assets/videos/          explainer videos
 ```
-
-## Credits
-
-Data: Brunner et al., *BCI Competition IV, data set 2a* (loaded with MOABB). Methods: EEGNet (Lawhern et al., 2018),
-CSP (Ramoser et al., 2000), Integrated Gradients (Sundararajan et al., 2017). The full list is in the app under
-Notes & Blog, References.
