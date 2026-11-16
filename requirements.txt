@@ -10,3 +10,4 @@ torch>=2.1             # CPU build is enough:  pip install torch --index-url htt
 # imageio-ffmpeg       # only to re-render the explainer videos (tools/make_videos.py)
 # matplotlib           # same
 # mne                  # only to re-create the demo artifacts / reference (tools/make_demo_artifacts.py)
+pytest
